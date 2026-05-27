@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PT Geo Santara Indo | Infrastruktur Air Industri & SPAM</title>
-    
+
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
-    
+
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+
     <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -23,21 +24,20 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        // Bold Doff Colors (Stronger but still matte)
                         geoBlue: {
-                            DEFAULT: '#1E3A8A', // Bolder Navy Blue
-                            dark: '#172554',    // Very Dark Navy
+                            DEFAULT: '#1E3A8A',
+                            dark: '#172554',
                             light: '#E2E8F0',
-                            accent: '#3B82F6'   // Brighter blue for dark backgrounds
+                            accent: '#3B82F6'
                         },
                         geoRed: {
-                            DEFAULT: '#991B1B', // Bolder Brick Red
-                            dark: '#7F1D1D',    // Dark Brick Red
+                            DEFAULT: '#991B1B',
+                            dark: '#7F1D1D',
                             light: '#F5E6E6',
-                            accent: '#EF4444'   // Brighter red for dark backgrounds
+                            accent: '#EF4444'
                         },
-                        geoDark: '#0B1120', // Almost black navy
-                        geoGray: '#F8FAFC'  // Semi-putih
+                        geoDark: '#0B1120',
+                        geoGray: '#F8FAFC'
                     }
                 }
             }
@@ -54,75 +54,147 @@
         }
     </style>
 </head>
-<body class="font-sans text-slate-800 bg-white antialiased selection:bg-geoRed selection:text-white">
 
-    <!-- Sticky Header (Putih) -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b-4 border-geoBlue shadow-sm transition-all duration-300">
+<body class="font-sans text-slate-800 bg-white antialiased selection:bg-geoRed selection:text-white overflow-x-hidden">
+
+    <!-- Sticky Header -->
+    <header
+        class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b-4 border-geoBlue shadow-sm transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
-                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
-                    <div class="w-10 h-10 bg-geoBlue rounded-full flex items-center justify-center text-white font-bold text-xl">G</div>
-                    <span class="font-extrabold text-2xl tracking-tight"><span class="text-geoBlue">GEO</span><span class="text-geoDark">INDONESIA</span></span>
+                    <div
+                        class="w-10 h-10 bg-geoBlue rounded-full flex items-center justify-center text-white font-bold text-xl">
+                        G</div>
+                    <span class="font-extrabold text-2xl tracking-tight"><span class="text-geoBlue">GEO</span><span class="text-geoDark">SANTARA INDO</span></span>
                 </div>
 
-                <!-- Main Navigation -->
                 <nav class="hidden lg:flex space-x-8 items-center">
-                    <a href="#" class="text-slate-600 hover:text-geoRed font-medium transition-colors duration-300 py-2">Beranda</a>
-                    <a href="#" class="text-slate-600 hover:text-geoRed font-medium transition-colors duration-300 py-2">Tentang Kami</a>
+                    <a href="index.html"
+                        class="text-geoRed font-semibold transition-colors duration-300 py-2 border-b-2 border-geoRed">Beranda</a>
                     <div class="group relative py-2">
-                        <button class="text-slate-600 hover:text-geoRed font-medium inline-flex items-center transition-colors duration-300">
-                            Divisi & Layanan
-                            <svg class="ml-1 w-4 h-4 text-slate-400 group-hover:text-geoRed transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        <button
+                            class="text-slate-600 hover:text-geoRed font-medium inline-flex items-center transition-colors duration-300">
+                            Tentang Kami
+                            <svg class="ml-1 w-4 h-4 text-slate-400 group-hover:text-geoRed transition-colors"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
                         </button>
-                        <div class="simple-dropdown absolute left-0 mt-4 w-64 opacity-0 invisible translate-y-2 transition-all duration-300 ease-in-out bg-white rounded-lg shadow-xl border border-slate-100 overflow-hidden z-50">
+                        <div
+                            class="simple-dropdown absolute left-0 mt-4 w-56 opacity-0 invisible translate-y-2 transition-all duration-300 ease-in-out bg-white rounded-lg shadow-xl border border-slate-100 overflow-hidden z-50">
                             <div class="py-2">
-                                <a href="#" class="block px-4 py-3 text-sm font-semibold text-geoBlue hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Konsesi SPAM B2B</a>
-                                <a href="#" class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Eksplorasi Sumber Daya</a>
-                                <a href="#" class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Geoteknik & Fondasi</a>
-                                <a href="#" class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Audit & Perizinan</a>
+                                <a href="profile.html"
+                                    class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Profile</a>
+                                <a href="sejarah.html"
+                                    class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Sejarah Perusahaan</a>
                             </div>
                         </div>
                     </div>
-                    <a href="#" class="text-slate-600 hover:text-geoRed font-medium transition-colors duration-300 py-2">Portofolio</a>
+                    <div class="group relative py-2">
+                        <button
+                            class="text-slate-600 hover:text-geoRed font-medium inline-flex items-center transition-colors duration-300">
+                            Divisi & Layanan
+                            <svg class="ml-1 w-4 h-4 text-slate-400 group-hover:text-geoRed transition-colors"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div
+                            class="simple-dropdown absolute left-0 mt-4 w-64 opacity-0 invisible translate-y-2 transition-all duration-300 ease-in-out bg-white rounded-lg shadow-xl border border-slate-100 overflow-hidden z-50">
+                            <div class="py-2">
+                                <a href="#"
+                                    class="block px-4 py-3 text-sm font-semibold text-geoBlue hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Konsesi
+                                    SPAM B2B</a>
+                                <a href="#"
+                                    class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Eksplorasi
+                                    Sumber Daya</a>
+                                <a href="#"
+                                    class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Geoteknik
+                                    & Fondasi</a>
+                                <a href="#"
+                                    class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Audit
+                                    & Perizinan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"
+                        class="text-slate-600 hover:text-geoRed font-medium transition-colors duration-300 py-2">Portofolio</a>
+                    <a href="kontak.html"
+                        class="text-slate-600 hover:text-geoRed font-medium transition-colors duration-300 py-2">Kontak
+                        Kami</a>
                 </nav>
 
-                <!-- CTA Button -->
                 <div class="hidden lg:flex">
-                    <a href="#" class="bg-geoRed hover:bg-geoRed-dark text-white px-6 py-2.5 rounded font-semibold shadow-md shadow-geoRed/20 transition-all duration-300 hover:-translate-y-0.5">Konsultasi SPAM</a>
+                    <a href="#"
+                        class="bg-geoRed hover:bg-geoRed-dark text-white px-6 py-2.5 rounded font-semibold shadow-md shadow-geoRed/20 transition-all duration-300 hover:-translate-y-0.5">Konsultasi
+                        SPAM</a>
                 </div>
+
+                <!-- Mobile menu button -->
+                <div class="flex lg:hidden items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-geoRed focus:outline-none p-2">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full left-0">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-bold text-geoRed bg-slate-50 border-b border-slate-50">Beranda</a>
+                <div class="px-3 py-3 border-b border-slate-50">
+                    <span class="block text-base font-medium text-slate-700">Tentang Kami</span>
+                    <div class="pl-4 mt-2 space-y-1">
+                        <a href="profile.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-600 hover:text-geoRed hover:bg-slate-50">Profile</a>
+                        <a href="sejarah.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-600 hover:text-geoRed hover:bg-slate-50">Sejarah Perusahaan</a>
+                    </div>
+                </div>
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-geoRed hover:bg-slate-50 border-b border-slate-50">Divisi & Layanan</a>
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-geoRed hover:bg-slate-50 border-b border-slate-50">Portofolio</a>
+                <a href="kontak.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-geoRed hover:bg-slate-50 border-b border-slate-50">Kontak Kami</a>
+                <a href="#" class="block mt-4 text-center bg-geoRed hover:bg-geoRed-dark text-white px-6 py-3 rounded-md font-semibold transition-colors">Konsultasi SPAM</a>
             </div>
         </div>
     </header>
 
     <!-- SECTION 1: HERO (WARNA - DARK NAVY WATER) -->
-    <section class="relative bg-[url('assets/img/hero-bg.png')] bg-cover bg-center overflow-hidden pt-16 pb-24 lg:pt-24 lg:pb-32 border-b-8 border-geoRed">
-        <!-- Overlay Dark Navy (Warna) -->
+    <section
+        class="relative bg-[url('assets/img/hero-bg.png')] bg-cover bg-center overflow-hidden pt-16 pb-24 lg:pt-24 lg:pb-32 border-b-8 border-geoRed">
         <div class="absolute inset-0 bg-geoDark/85 backdrop-blur-sm"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-                <!-- Text Content -->
                 <div data-aos="fade-up">
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.15] mb-6">
-                        Transformasi Kapital Menjadi Pasokan <span class="text-geoBlue-accent">Air Industri</span> Tanpa Batas.
+                        Transformasi Kapital Menjadi Pasokan <span class="text-geoBlue-accent">Air Industri</span> Tanpa
+                        Batas.
                     </h1>
                     <p class="text-lg text-slate-300 mb-8 max-w-xl leading-relaxed border-l-4 border-geoRed pl-5">
-                        PT Geo Santara Indo berinvestasi, membangun, dan mengoperasikan sistem penyediaan air industri (SPAM) dengan skema <strong class="text-geoRed-accent">Zero CapEx</strong>. Kami mengamankan keberlangsungan operasional Anda melalui keandalan infrastruktur.
+                        PT Geo Santara Indo berinvestasi, membangun, dan mengoperasikan sistem penyediaan air industri
+                        (SPAM) dengan skema <strong class="text-geoRed-accent">Zero CapEx</strong>. Kami mengamankan
+                        keberlangsungan operasional Anda melalui keandalan infrastruktur.
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <a href="#" class="bg-geoRed hover:bg-geoRed-dark text-white px-8 py-4 rounded font-semibold shadow-lg shadow-geoRed/20 transition-all duration-300 hover:-translate-y-0.5">Mulai Proyek B2B</a>
-                        <a href="#" class="bg-transparent border-2 border-slate-400 hover:border-white text-slate-300 hover:text-white px-8 py-4 rounded font-semibold transition-all duration-300">Company Profile</a>
+                        <a href="#"
+                            class="bg-geoRed hover:bg-geoRed-dark text-white px-8 py-4 rounded font-semibold shadow-lg shadow-geoRed/20 transition-all duration-300 hover:-translate-y-0.5">Mulai
+                            Proyek B2B</a>
+                        <a href="#"
+                            class="bg-transparent border-2 border-slate-400 hover:border-white text-slate-300 hover:text-white px-8 py-4 rounded font-semibold transition-all duration-300">Company
+                            Profile</a>
                     </div>
                 </div>
 
-                <!-- Visual: 3D WTP Placeholder -->
-                <div data-aos="fade-up" data-aos-delay="200" class="relative">
-                    <div class="aspect-[4/3] w-full bg-slate-800/80 rounded-xl border border-slate-600 flex flex-col items-center justify-center shadow-2xl relative overflow-hidden group">
-                        <!-- Placeholder Grid Pattern -->
-                        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]"></div>
-                        <span class="text-white/80 font-semibold text-center px-6 relative z-10">Area Penempatan 3D Model<br>Water Treatment Plant (WTP)</span>
-                    </div>
+                <div data-aos="fade-up" data-aos-delay="200"
+                    class="relative w-full h-full flex items-center justify-center">
+                    <img src="assets/img/wtp.png" alt="Water Treatment Plant"
+                        class="w-full h-auto rounded-xl object-contain scale-100 lg:scale-105 drop-shadow-2xl transition-transform duration-700 hover:scale-110 origin-center mt-12 lg:mt-0 cursor-zoom-in"
+                        onclick="openImageModal(this.src)">
                 </div>
             </div>
         </div>
@@ -131,12 +203,22 @@
     <!-- SECTION 2: SERTIFIKASI (PUTIH) -->
     <section class="py-12 bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 class="text-sm font-bold text-geoBlue uppercase tracking-widest mb-6" data-aos="fade-up">Telah Tersertifikasi & Memenuhi Standar Operasional Nasional</h3>
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 transition-all duration-700 text-slate-500 opacity-80" data-aos="fade-up" data-aos-delay="100">
-                <div class="h-12 flex items-center justify-center text-2xl font-extrabold tracking-wider hover:text-geoRed transition-colors cursor-default">ISO 9001:2015</div>
-                <div class="h-12 flex items-center justify-center text-2xl font-extrabold tracking-wider hover:text-geoRed transition-colors cursor-default">ASIB</div>
-                <div class="h-12 flex items-center justify-center text-2xl font-extrabold tracking-wider hover:text-geoRed transition-colors cursor-default">K3 NASIONAL</div>
-                <div class="h-12 flex items-center justify-center text-2xl font-extrabold tracking-wider hover:text-geoRed transition-colors cursor-default">SBUJK</div>
+            <h3 class="text-sm font-bold text-geoBlue uppercase tracking-widest mb-6" data-aos="fade-up">Telah
+                Tersertifikasi & Memenuhi Standar Operasional Nasional</h3>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 transition-all duration-700 text-slate-500 opacity-80"
+                data-aos="fade-up" data-aos-delay="100">
+                <div
+                    class="h-12 flex items-center justify-center text-2xl font-extrabold tracking-wider hover:text-geoRed transition-colors cursor-default">
+                    ISO 9001:2015</div>
+                <div
+                    class="h-12 flex items-center justify-center text-2xl font-extrabold tracking-wider hover:text-geoRed transition-colors cursor-default">
+                    ASIB</div>
+                <div
+                    class="h-12 flex items-center justify-center text-2xl font-extrabold tracking-wider hover:text-geoRed transition-colors cursor-default">
+                    K3 NASIONAL</div>
+                <div
+                    class="h-12 flex items-center justify-center text-2xl font-extrabold tracking-wider hover:text-geoRed transition-colors cursor-default">
+                    SBUJK</div>
             </div>
         </div>
     </section>
@@ -147,44 +229,66 @@
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">4 Pilar Fokus Utama Kami</h2>
                 <div class="w-24 h-1 bg-geoRed mx-auto mb-6 rounded-full"></div>
-                <p class="text-lg text-blue-100">Menyediakan solusi infrastruktur air dan rekayasa kebumian terintegrasi dari hulu hingga hilir untuk skala industri.</p>
+                <p class="text-lg text-blue-100">Menyediakan solusi infrastruktur air dan rekayasa kebumian terintegrasi
+                    dari hulu hingga hilir untuk skala industri.</p>
             </div>
 
             <div class="grid lg:grid-cols-3 gap-6">
                 <!-- Main Focus Card -->
-                <div class="lg:col-span-3 bg-white rounded-xl p-8 md:p-12 shadow-xl relative overflow-hidden group" data-aos="fade-up">
+                <div class="lg:col-span-3 bg-white rounded-xl p-8 md:p-12 shadow-xl relative overflow-hidden group"
+                    data-aos="fade-up">
                     <div class="relative z-10 md:w-3/4">
-                        <span class="inline-block text-geoRed text-sm font-bold uppercase tracking-wider mb-2">Prioritas B2B</span>
-                        <h3 class="text-3xl md:text-4xl font-extrabold text-geoDark mb-4">Konsesi & Infrastruktur Air (SPAM)</h3>
+                        <span class="inline-block text-geoRed text-sm font-bold uppercase tracking-wider mb-2">Prioritas
+                            B2B</span>
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-geoDark mb-4">Konsesi & Infrastruktur Air
+                            (SPAM)</h3>
                         <p class="text-slate-600 text-lg mb-8 leading-relaxed">
-                            Fokus utama kami adalah berinvestasi, membangun, dan mengelola Sistem Penyediaan Air Minum/Industri (SPAM) dengan skema B.O.O.T. Kami mengambil alih beban belanja modal Anda (Zero CapEx) untuk menjamin pasokan air pabrik secara permanen.
+                            Fokus utama kami adalah berinvestasi, membangun, dan mengelola Sistem Penyediaan Air
+                            Minum/Industri (SPAM) dengan skema B.O.O.T. Kami mengambil alih beban belanja modal Anda
+                            (Zero CapEx) untuk menjamin pasokan air pabrik secara permanen.
                         </p>
-                        <a href="#" class="bg-geoRed hover:bg-geoRed-dark text-white px-6 py-3 rounded font-semibold transition-colors duration-300 inline-flex items-center">
+                        <a href="#"
+                            class="bg-geoRed hover:bg-geoRed-dark text-white px-6 py-3 rounded font-semibold transition-colors duration-300 inline-flex items-center">
                             Pelajari Model Bisnis SPAM &rarr;
                         </a>
                     </div>
                 </div>
 
                 <!-- 3 Supporting Divisions -->
-                <div class="bg-geoBlue-dark rounded-xl p-8 border border-white/10 shadow-lg hover:border-geoRed transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <div class="w-10 h-10 bg-geoRed/20 rounded flex items-center justify-center text-geoRed-light mb-6 font-bold">01</div>
+                <div class="bg-geoBlue-dark rounded-xl p-8 border border-white/10 shadow-lg hover:border-geoRed transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-10 h-10 bg-geoRed/20 rounded flex items-center justify-center text-geoRed-light mb-6 font-bold">
+                        01</div>
                     <h3 class="text-xl font-bold text-white mb-3">Eksplorasi Sumber Daya Tanah</h3>
-                    <p class="text-blue-100 text-sm mb-6 leading-relaxed">Pengerjaan sumur industri dalam (Deep Well), survei geolistrik, dan pemetaan hidrogeologi untuk sumber air optimal.</p>
-                    <a href="#" class="text-white text-sm font-semibold hover:text-geoRed-light transition-colors">Lihat Detail &rarr;</a>
+                    <p class="text-blue-100 text-sm mb-6 leading-relaxed">Pengerjaan sumur industri dalam (Deep Well),
+                        survei geolistrik, dan pemetaan hidrogeologi untuk sumber air optimal.</p>
+                    <a href="#" class="text-white text-sm font-semibold hover:text-geoRed-light transition-colors">Lihat
+                        Detail &rarr;</a>
                 </div>
 
-                <div class="bg-geoBlue-dark rounded-xl p-8 border border-white/10 shadow-lg hover:border-geoRed transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                    <div class="w-10 h-10 bg-geoRed/20 rounded flex items-center justify-center text-geoRed-light mb-6 font-bold">02</div>
+                <div class="bg-geoBlue-dark rounded-xl p-8 border border-white/10 shadow-lg hover:border-geoRed transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-10 h-10 bg-geoRed/20 rounded flex items-center justify-center text-geoRed-light mb-6 font-bold">
+                        02</div>
                     <h3 class="text-xl font-bold text-white mb-3">Geoteknik & Rekayasa Fondasi</h3>
-                    <p class="text-blue-100 text-sm mb-6 leading-relaxed">Uji daya dukung tanah (Soil Test, Sondir), analisis kestabilan lereng, serta rekayasa fondasi tiang pancang.</p>
-                    <a href="#" class="text-white text-sm font-semibold hover:text-geoRed-light transition-colors">Lihat Detail &rarr;</a>
+                    <p class="text-blue-100 text-sm mb-6 leading-relaxed">Uji daya dukung tanah (Soil Test, Sondir),
+                        analisis kestabilan lereng, serta rekayasa fondasi tiang pancang.</p>
+                    <a href="#" class="text-white text-sm font-semibold hover:text-geoRed-light transition-colors">Lihat
+                        Detail &rarr;</a>
                 </div>
 
-                <div class="bg-geoBlue-dark rounded-xl p-8 border border-white/10 shadow-lg hover:border-geoRed transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
-                    <div class="w-10 h-10 bg-geoRed/20 rounded flex items-center justify-center text-geoRed-light mb-6 font-bold">03</div>
+                <div class="bg-geoBlue-dark rounded-xl p-8 border border-white/10 shadow-lg hover:border-geoRed transition-all duration-300"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-10 h-10 bg-geoRed/20 rounded flex items-center justify-center text-geoRed-light mb-6 font-bold">
+                        03</div>
                     <h3 class="text-xl font-bold text-white mb-3">Audit Operasional & Perizinan</h3>
-                    <p class="text-blue-100 text-sm mb-6 leading-relaxed">Konsultasi legalitas Surat Izin Pemanfaatan Air Tanah (SIPA), penyusunan studi kelayakan, dan audit regulasi.</p>
-                    <a href="#" class="text-white text-sm font-semibold hover:text-geoRed-light transition-colors">Lihat Detail &rarr;</a>
+                    <p class="text-blue-100 text-sm mb-6 leading-relaxed">Konsultasi legalitas Surat Izin Pemanfaatan
+                        Air Tanah (SIPA), penyusunan studi kelayakan, dan audit regulasi.</p>
+                    <a href="#" class="text-white text-sm font-semibold hover:text-geoRed-light transition-colors">Lihat
+                        Detail &rarr;</a>
                 </div>
             </div>
         </div>
@@ -196,34 +300,55 @@
             <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-4xl font-extrabold text-geoDark mb-4">Apa Kata Mitra Kami?</h2>
                 <div class="w-24 h-1 bg-geoBlue mx-auto mb-6 rounded-full"></div>
-                <p class="text-lg text-slate-600">Dengarkan langsung dari klien yang telah mempercayakan infrastruktur air mereka kepada kami.</p>
+                <p class="text-lg text-slate-600">Dengarkan langsung dari klien yang telah mempercayakan infrastruktur
+                    air mereka kepada kami.</p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Video Testimonial 1 -->
-                <div class="bg-white rounded-xl aspect-video overflow-hidden relative group cursor-pointer shadow-md" data-aos="fade-up" data-aos-delay="100">
-                    <div class="absolute inset-0 bg-geoDark/30 group-hover:bg-transparent transition-colors duration-500 z-10 flex items-center justify-center">
-                        <div class="w-16 h-16 bg-geoRed rounded-full flex items-center justify-center text-white shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                <div class="bg-white rounded-xl aspect-video overflow-hidden relative group cursor-pointer shadow-md"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="absolute inset-0 bg-geoDark/30 group-hover:bg-transparent transition-colors duration-500 z-10 flex items-center justify-center">
+                        <div
+                            class="w-16 h-16 bg-geoRed rounded-full flex items-center justify-center text-white shadow-lg transform group-hover:scale-110 transition-transform duration-300">
                             <!-- Play Icon -->
-                            <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                            <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
                         </div>
                     </div>
-                    <img src="https://via.placeholder.com/800x450/e2e8f0/64748b?text=Video+Testimoni+1" alt="Testimoni 1" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 transition-all duration-500">
-                    <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-geoDark/90 to-transparent z-20 border-b-4 border-geoRed">
+                    <img src="https://via.placeholder.com/800x450/e2e8f0/64748b?text=Video+Testimoni+1"
+                        alt="Testimoni 1"
+                        class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 transition-all duration-500">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-geoDark/90 to-transparent z-20 border-b-4 border-geoRed">
                         <h4 class="text-white font-semibold text-lg">Testimonial Space Dragon, Bali</h4>
                     </div>
                 </div>
 
                 <!-- Video Testimonial 2 -->
-                <div class="bg-white rounded-xl aspect-video overflow-hidden relative group cursor-pointer shadow-md" data-aos="fade-up" data-aos-delay="200">
-                    <div class="absolute inset-0 bg-geoDark/30 group-hover:bg-transparent transition-colors duration-500 z-10 flex items-center justify-center">
-                        <div class="w-16 h-16 bg-geoRed rounded-full flex items-center justify-center text-white shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                <div class="bg-white rounded-xl aspect-video overflow-hidden relative group cursor-pointer shadow-md"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="absolute inset-0 bg-geoDark/30 group-hover:bg-transparent transition-colors duration-500 z-10 flex items-center justify-center">
+                        <div
+                            class="w-16 h-16 bg-geoRed rounded-full flex items-center justify-center text-white shadow-lg transform group-hover:scale-110 transition-transform duration-300">
                             <!-- Play Icon -->
-                            <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path></svg>
+                            <svg class="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                                    clip-rule="evenodd"></path>
+                            </svg>
                         </div>
                     </div>
-                    <img src="https://via.placeholder.com/800x450/e2e8f0/64748b?text=Video+Testimoni+2" alt="Testimoni 2" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 transition-all duration-500">
-                    <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-geoDark/90 to-transparent z-20 border-b-4 border-geoBlue">
+                    <img src="https://via.placeholder.com/800x450/e2e8f0/64748b?text=Video+Testimoni+2"
+                        alt="Testimoni 2"
+                        class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 transition-all duration-500">
+                    <div
+                        class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-geoDark/90 to-transparent z-20 border-b-4 border-geoBlue">
                         <h4 class="text-white font-semibold text-lg">SIPA: Solusi Tepat Masalah Air</h4>
                     </div>
                 </div>
@@ -232,60 +357,80 @@
     </section>
 
     <!-- SECTION 5: DIPERCAYA OLEH (WARNA - RED) -->
-    <section class="py-16 bg-geoRed border-t border-geoRed-dark relative overflow-hidden">
+    <section class="py-16 bg-geoRed border-y border-geoRed-dark relative overflow-hidden">
         <!-- Abstract Pattern for texture -->
-        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')]"></div>
+        <div
+            class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')]">
+        </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <h3 class="text-center text-sm font-bold text-geoRed-light mb-10 uppercase tracking-widest" data-aos="fade-up">Telah Dipercaya Oleh Institusi & Korporasi Besar</h3>
-            
+            <h3 class="text-center text-sm font-bold text-geoRed-light mb-10 uppercase tracking-widest"
+                data-aos="fade-up">Telah Dipercaya Oleh Institusi & Korporasi Besar</h3>
+
             <!-- 8 Column Grid for Logos (White logos via CSS invert) -->
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 items-center" data-aos="fade-up" data-aos-delay="150">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 items-center" data-aos="fade-up"
+                data-aos-delay="150">
                 <div class="h-16 flex items-center justify-center cursor-default">
-                    <img src="https://via.placeholder.com/150x60/000000/ffffff?text=ANTAM" alt="Logo Antam" class="max-h-full max-w-full opacity-70 hover:opacity-100 transition-opacity brightness-0 invert">
+                    <img src="https://via.placeholder.com/150x60/000000/ffffff?text=ANTAM" alt="Logo Antam"
+                        class="max-h-full max-w-full opacity-70 hover:opacity-100 transition-opacity brightness-0 invert">
                 </div>
                 <div class="h-16 flex items-center justify-center cursor-default">
-                    <img src="https://via.placeholder.com/150x60/000000/ffffff?text=WIKA" alt="Logo Wika" class="max-h-full max-w-full opacity-70 hover:opacity-100 transition-opacity brightness-0 invert">
+                    <img src="https://via.placeholder.com/150x60/000000/ffffff?text=WIKA" alt="Logo Wika"
+                        class="max-h-full max-w-full opacity-70 hover:opacity-100 transition-opacity brightness-0 invert">
                 </div>
                 <div class="h-16 flex items-center justify-center cursor-default">
-                    <img src="https://via.placeholder.com/150x60/000000/ffffff?text=SUCOFINDO" alt="Logo Sucofindo" class="max-h-full max-w-full opacity-70 hover:opacity-100 transition-opacity brightness-0 invert">
+                    <img src="https://via.placeholder.com/150x60/000000/ffffff?text=SUCOFINDO" alt="Logo Sucofindo"
+                        class="max-h-full max-w-full opacity-70 hover:opacity-100 transition-opacity brightness-0 invert">
                 </div>
                 <div class="h-16 flex items-center justify-center cursor-default">
-                    <img src="https://via.placeholder.com/150x60/000000/ffffff?text=ESDM" alt="Logo ESDM" class="max-h-full max-w-full opacity-70 hover:opacity-100 transition-opacity brightness-0 invert">
+                    <img src="https://via.placeholder.com/150x60/000000/ffffff?text=ESDM" alt="Logo ESDM"
+                        class="max-h-full max-w-full opacity-70 hover:opacity-100 transition-opacity brightness-0 invert">
                 </div>
                 <div class="h-16 flex items-center justify-center cursor-default">
-                    <img src="https://via.placeholder.com/150x60/000000/ffffff?text=HOKBEN" alt="Logo Hokben" class="max-h-full max-w-full opacity-70 hover:opacity-100 transition-opacity brightness-0 invert">
+                    <img src="https://via.placeholder.com/150x60/000000/ffffff?text=HOKBEN" alt="Logo Hokben"
+                        class="max-h-full max-w-full opacity-70 hover:opacity-100 transition-opacity brightness-0 invert">
                 </div>
                 <div class="h-16 flex items-center justify-center cursor-default">
-                    <img src="https://via.placeholder.com/150x60/000000/ffffff?text=BCA" alt="Logo BCA" class="max-h-full max-w-full opacity-70 hover:opacity-100 transition-opacity brightness-0 invert">
+                    <img src="https://via.placeholder.com/150x60/000000/ffffff?text=BCA" alt="Logo BCA"
+                        class="max-h-full max-w-full opacity-70 hover:opacity-100 transition-opacity brightness-0 invert">
                 </div>
                 <div class="h-16 flex items-center justify-center cursor-default">
-                    <img src="https://via.placeholder.com/150x60/000000/ffffff?text=MANDIRI" alt="Logo Mandiri" class="max-h-full max-w-full opacity-70 hover:opacity-100 transition-opacity brightness-0 invert">
+                    <img src="https://via.placeholder.com/150x60/000000/ffffff?text=MANDIRI" alt="Logo Mandiri"
+                        class="max-h-full max-w-full opacity-70 hover:opacity-100 transition-opacity brightness-0 invert">
                 </div>
                 <div class="h-16 flex items-center justify-center cursor-default">
-                    <img src="https://via.placeholder.com/150x60/000000/ffffff?text=BNI" alt="Logo BNI" class="max-h-full max-w-full opacity-70 hover:opacity-100 transition-opacity brightness-0 invert">
+                    <img src="https://via.placeholder.com/150x60/000000/ffffff?text=BNI" alt="Logo BNI"
+                        class="max-h-full max-w-full opacity-70 hover:opacity-100 transition-opacity brightness-0 invert">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 6: FOOTER -->
+
+
+    <!-- SECTION 7: FOOTER -->
     <footer class="bg-geoDark pt-16 pb-8 relative overflow-hidden border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                 <!-- Column 1: Brand -->
                 <div class="lg:col-span-1">
-                    <span class="font-extrabold text-2xl tracking-tight mb-4 inline-block"><span class="text-geoBlue-light">GEO</span><span class="text-white">INDONESIA</span></span>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Pionir Infrastruktur Air Industri & Konsesi Berkelanjutan. Mengamankan pasokan air bisnis Anda dengan teknologi mutakhir.</p>
+                    <span class="font-extrabold text-2xl tracking-tight mb-4 inline-block"><span
+                            class="text-geoBlue-light">GEO</span><span class="text-white">SANTARA INDO</span></span>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Pionir Infrastruktur Air Industri & Konsesi
+                        Berkelanjutan. Mengamankan pasokan air bisnis Anda dengan teknologi mutakhir.</p>
                 </div>
 
                 <!-- Column 2: Divisi -->
                 <div>
                     <h4 class="text-white font-semibold mb-4 text-sm">Divisi & Layanan</h4>
                     <ul class="space-y-2 text-slate-400 text-sm">
-                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Konsesi & Infrastruktur SPAM</a></li>
-                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Eksplorasi Sumber Daya Tanah</a></li>
-                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Geoteknik & Rekayasa Fondasi</a></li>
-                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Audit & Konsultasi Perizinan</a></li>
+                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Konsesi & Infrastruktur
+                                SPAM</a></li>
+                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Eksplorasi Sumber Daya
+                                Tanah</a></li>
+                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Geoteknik & Rekayasa
+                                Fondasi</a></li>
+                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Audit & Konsultasi
+                                Perizinan</a></li>
                     </ul>
                 </div>
 
@@ -293,7 +438,8 @@
                 <div>
                     <h4 class="text-white font-semibold mb-4 text-sm">Perusahaan</h4>
                     <ul class="space-y-2 text-slate-400 text-sm">
-                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Tentang Kami</a></li>
+                        <li><a href="tentang-kami.html" class="hover:text-geoRed-light transition-colors">Tentang
+                                Kami</a></li>
                         <li><a href="#" class="hover:text-geoRed-light transition-colors">Portofolio Proyek</a></li>
                         <li><a href="#" class="hover:text-geoRed-light transition-colors">Berita & Artikel</a></li>
                     </ul>
@@ -317,19 +463,87 @@
     </footer>
 
     <!-- Sticky WhatsApp Button -->
-    <a href="https://wa.me/6281134500100" target="_blank" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 group">
-        <div class="bg-white px-4 py-2 rounded-full shadow border border-slate-100 text-sm font-semibold text-slate-700 opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 transition-all duration-300 hidden md:block">
+    <a href="https://wa.me/6281134500100" target="_blank"
+        class="fixed bottom-6 right-6 z-50 flex items-center gap-3 group">
+        <div
+            class="bg-white px-4 py-2 rounded-full shadow border border-slate-100 text-sm font-semibold text-slate-700 opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 transition-all duration-300 hidden md:block">
             Konsultasi Gratis
         </div>
-        <div class="floating-wa w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-lg hover:bg-[#1ebd5b] transition-colors cursor-pointer border-2 border-white">
+        <div
+            class="floating-wa w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-lg hover:bg-[#1ebd5b] transition-colors cursor-pointer border-2 border-white">
             <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 3.825.001 6.938 3.113 6.939 6.938-.001 3.825-3.114 6.938-6.939 6.938z"></path>
+                <path
+                    d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 3.825.001 6.938 3.113 6.939 6.938-.001 3.825-3.114 6.938-6.939 6.938z">
+                </path>
             </svg>
         </div>
     </a>
 
+    <!-- Image Modal -->
+    <div id="image-modal" class="fixed inset-0 z-[100] hidden bg-black/90 flex-col items-center justify-center p-4 cursor-zoom-out opacity-0 transition-opacity duration-300">
+        <button id="modal-close" class="absolute top-6 right-6 text-white/70 hover:text-white bg-black/50 hover:bg-black/80 rounded-full p-2 transition-all">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <img id="modal-image" src="" alt="Enlarged View" class="max-w-full max-h-full object-contain rounded-xl scale-95 transition-transform duration-300 shadow-2xl">
+    </div>
+
+    <!-- UI Scripts -->
+    <script>
+        // Image Modal Logic
+        const imageModal = document.getElementById('image-modal');
+        const modalImg = document.getElementById('modal-image');
+        
+        function openImageModal(src) {
+            modalImg.src = src;
+            imageModal.classList.remove('hidden');
+            imageModal.classList.add('flex');
+            // Timeout to allow display to apply before opacity transition
+            setTimeout(() => {
+                imageModal.classList.remove('opacity-0');
+                modalImg.classList.remove('scale-95');
+                modalImg.classList.add('scale-100');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal() {
+            imageModal.classList.add('opacity-0');
+            modalImg.classList.remove('scale-100');
+            modalImg.classList.add('scale-95');
+            setTimeout(() => {
+                imageModal.classList.add('hidden');
+                imageModal.classList.remove('flex');
+                document.body.style.overflow = '';
+            }, 300);
+        }
+
+        imageModal.addEventListener('click', (e) => {
+            if (e.target === imageModal || e.target === modalImg || e.target.closest('#modal-close')) {
+                closeImageModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !imageModal.classList.contains('hidden')) {
+                closeImageModal();
+            }
+        });
+
+        // Mobile Menu Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+    
     <!-- External Assets Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami | PT Geo Santara Indo</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        geoBlue: {
+                            DEFAULT: '#1E3A8A',
+                            dark: '#172554',
+                            light: '#E2E8F0',
+                            accent: '#3B82F6'
+                        },
+                        geoRed: {
+                            DEFAULT: '#991B1B',
+                            dark: '#7F1D1D',
+                            light: '#F5E6E6',
+                            accent: '#EF4444'
+                        },
+                        geoDark: '#0B1120',
+                        geoGray: '#F8FAFC'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .group:hover .simple-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body class="font-sans text-slate-800 bg-white antialiased selection:bg-geoRed selection:text-white overflow-x-hidden">
+
+    <!-- Sticky Header -->
+    <header
+        class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b-4 border-geoBlue shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <div
+                        class="w-10 h-10 bg-geoBlue rounded-full flex items-center justify-center text-white font-bold text-xl">
+                        G</div>
+                    <span class="font-extrabold text-2xl tracking-tight"><span class="text-geoBlue">GEO</span><span class="text-geoDark">SANTARA INDO</span></span>
+                </a>
+
+                <nav class="hidden lg:flex space-x-8 items-center">
+                    <a href="index.html"
+                        class="text-slate-600 hover:text-geoRed font-medium transition-colors duration-300 py-2">Beranda</a>
+                    <div class="group relative py-2">
+                        <button
+                            class="text-geoRed font-semibold inline-flex items-center transition-colors duration-300 border-b-2 border-geoRed">
+                            Tentang Kami
+                            <svg class="ml-1 w-4 h-4 text-geoRed transition-colors"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div
+                            class="simple-dropdown absolute left-0 mt-4 w-56 opacity-0 invisible translate-y-2 transition-all duration-300 ease-in-out bg-white rounded-lg shadow-xl border border-slate-100 overflow-hidden z-50">
+                            <div class="py-2">
+                                <a href="profile.html"
+                                    class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Profile</a>
+                                <a href="sejarah.html"
+                                    class="block px-4 py-3 text-sm font-semibold text-geoBlue hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Sejarah Perusahaan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative py-2">
+                        <button
+                            class="text-slate-600 hover:text-geoRed font-medium inline-flex items-center transition-colors duration-300">
+                            Divisi & Layanan
+                            <svg class="ml-1 w-4 h-4 text-slate-400 group-hover:text-geoRed transition-colors"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div
+                            class="simple-dropdown absolute left-0 mt-4 w-64 opacity-0 invisible translate-y-2 transition-all duration-300 ease-in-out bg-white rounded-lg shadow-xl border border-slate-100 overflow-hidden z-50">
+                            <div class="py-2">
+                                <a href="#"
+                                    class="block px-4 py-3 text-sm font-semibold text-geoBlue hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Konsesi
+                                    SPAM B2B</a>
+                                <a href="#"
+                                    class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Eksplorasi
+                                    Sumber Daya</a>
+                                <a href="#"
+                                    class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Geoteknik
+                                    & Fondasi</a>
+                                <a href="#"
+                                    class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Audit
+                                    & Perizinan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#"
+                        class="text-slate-600 hover:text-geoRed font-medium transition-colors duration-300 py-2">Portofolio</a>
+                    <a href="kontak.html"
+                        class="text-slate-600 hover:text-geoRed font-medium transition-colors duration-300 py-2">Kontak
+                        Kami</a>
+                </nav>
+
+                <div class="hidden lg:flex">
+                    <a href="#"
+                        class="bg-geoRed hover:bg-geoRed-dark text-white px-6 py-2.5 rounded font-semibold shadow-md shadow-geoRed/20 transition-all duration-300 hover:-translate-y-0.5">Konsultasi
+                        SPAM</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="flex lg:hidden items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-geoRed focus:outline-none p-2">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full left-0">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-geoRed hover:bg-slate-50 border-b border-slate-50">Beranda</a>
+                <div class="px-3 py-3 border-b border-slate-50">
+                    <span class="block text-base font-medium text-slate-700">Tentang Kami</span>
+                    <div class="pl-4 mt-2 space-y-1">
+                        <a href="profile.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-600 hover:text-geoRed hover:bg-slate-50">Profile</a>
+                        <a href="sejarah.html" class="block px-3 py-2 rounded-md text-sm font-bold text-geoRed bg-slate-50">Sejarah Perusahaan</a>
+                    </div>
+                </div>
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-geoRed hover:bg-slate-50 border-b border-slate-50">Divisi & Layanan</a>
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-geoRed hover:bg-slate-50 border-b border-slate-50">Portofolio</a>
+                <a href="kontak.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-geoRed hover:bg-slate-50 border-b border-slate-50">Kontak Kami</a>
+                <a href="#" class="block mt-4 text-center bg-geoRed hover:bg-geoRed-dark text-white px-6 py-3 rounded-md font-semibold transition-colors">Konsultasi SPAM</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION TENTANG KAMI -->
+    <section class="relative bg-geoDark overflow-hidden py-20 lg:py-32 border-b-8 border-geoRed">
+        <!-- Abstract Background -->
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-geoBlue-accent via-geoDark to-geoDark"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-6" data-aos="fade-up">Sejarah Perusahaan</h1>
+            <div class="w-24 h-1.5 bg-geoRed mx-auto mb-8 rounded-full" data-aos="fade-up" data-aos-delay="100"></div>
+            <p class="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                Mengenal lebih dekat perjalanan dan dedikasi PT Geo Santara Indonesia dalam menghadirkan layanan terbaik.
+            </p>
+        </div>
+    </section>
+
+    <!-- CONTENT SEJARAH -->
+    <section class="py-20 lg:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Text Content -->
+                <div data-aos="fade-right">
+                    <span class="inline-block text-geoRed text-sm font-bold uppercase tracking-widest mb-3">PT Geo Santara Indonesia</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-geoDark mb-6 leading-tight">
+                        Memberikan Layanan <span class="text-geoBlue">Terbaik</span> Sejak 2018
+                    </h2>
+                    
+                    <div class="space-y-6 text-lg text-slate-600 leading-relaxed">
+                        <p>
+                            Perjalanan panjang yang telah dilalui membawa kedewasaan dalam menghadapi kebutuhan masyarakat maupun industri besar yang semakin berkembang, dan bergerak dengan sangat cepat. PT. Geo Santara berdiri pada tahun 2018 dan telah melakukan berbagai proyek di hampir seluruh wilayah di Indonesia.
+                        </p>
+                        
+                        <div class="p-6 bg-geoGray border-l-4 border-geoRed rounded-r-xl shadow-sm my-8">
+                            <h3 class="text-xl font-bold text-geoDark mb-2">Semua Peralatan Semakin Modern</h3>
+                            <p class="text-slate-600 text-base">
+                                Pada Tahun 2024 ini, PT GEO SANTARA INDONESIA telah menjadi perusahaan yang Modern dan Terpercaya. Dengan tenaga ahli berpengalaman dan peralatan modern, kami memastikan setiap pekerjaan dilakukan dengan cepat dan efisien. Setiap layanan kami mulai dari pemasangan hingga perawatan dirancang untuk memberikan solusi terbaik bagi permasalahan air di rumah atau tempat usaha Anda.
+                            </p>
+                        </div>
+                        
+                        <p>
+                            Didukung oleh tenaga ahli yang professional, inovatif, dan berpengalaman, PT. GEO SANTARA INDONESIA telah banyak berpengalaman mengerjakan pekerjaan di berbagai proyek di Indonesia, baik dari masyarakat, instansi pemerintah maupun swasta. 
+                        </p>
+                        <p>
+                            Dengan penguasaan teknologi dan Sumber Daya Manusia yang handal, serta manajemen yang tangguh merupakan jaminan kami dalam memberikan hasil yang terbaik.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Image Collage -->
+                <div class="relative" data-aos="fade-left">
+                    <div class="aspect-square bg-geoBlue-light rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1541888086425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop" alt="Konstruksi SPAM" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-8 -left-8 w-64 h-64 bg-geoRed rounded-2xl overflow-hidden shadow-xl border-8 border-white hidden md:block">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1974&auto=format&fit=crop" alt="Tenaga Ahli" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- DIREKSI DAN PENASIHAT -->
+    <section class="py-24 bg-geoGray border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
+                <span class="inline-block text-geoRed text-sm font-bold uppercase tracking-widest mb-2">Manajemen Inti</span>
+                <h2 class="text-3xl md:text-5xl font-extrabold text-geoDark mb-6">Direksi dan Penasihat</h2>
+                <div class="w-24 h-1.5 bg-geoBlue mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <!-- 1. Yoseph -->
+                <div class="bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden group hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-64 overflow-hidden relative bg-slate-100">
+                        <img src="https://ui-avatars.com/api/?name=Yoseph+Galih&background=1E3A8A&color=fff&size=512" alt="Yoseph Galih Gunawan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-geoDark/80 to-transparent flex items-end p-6">
+                            <span class="bg-geoRed text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wider">Direksi</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-geoDark mb-1">Yoseph Galih Gunawan, S.T.</h3>
+                        <p class="text-sm text-slate-500 mb-4">Sejak 2018 &bull; Institut Teknologi Nasional Yogyakarta</p>
+                        <div class="mb-5">
+                            <span class="text-xs font-semibold text-geoBlue uppercase tracking-wider">Spesialisasi</span>
+                            <p class="text-slate-700 text-sm mt-1">Pengeboran, Geoteknik, Konstruksi</p>
+                        </div>
+                        <div>
+                            <span class="text-xs font-semibold text-geoRed uppercase tracking-wider">Tanggung Jawab</span>
+                            <ul class="mt-2 space-y-1.5 text-sm text-slate-600 list-disc list-inside">
+                                <li>Mengakses dan memeriksa semua dokumen perusahaan.</li>
+                                <li>Meminta penjelasan direksi secara tertulis dan lisan.</li>
+                                <li>Pengurusan Perseroan melalui RUPS.</li>
+                                <li>Melakukan pelaporan dan dokumentasi secara berkala.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Lukman -->
+                <div class="bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden group hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-64 overflow-hidden relative bg-slate-100">
+                        <img src="https://ui-avatars.com/api/?name=Lukman+Lukita&background=1E3A8A&color=fff&size=512" alt="Lukman Lukita Aji" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-geoDark/80 to-transparent flex items-end p-6">
+                            <span class="bg-geoRed text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wider">Direksi</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-geoDark mb-1">Lukman Lukita Aji, S.T.</h3>
+                        <p class="text-sm text-slate-500 mb-4">Sejak 2024 &bull; Universitas Atma Jaya Yogyakarta</p>
+                        <div class="mb-5">
+                            <span class="text-xs font-semibold text-geoBlue uppercase tracking-wider">Spesialisasi</span>
+                            <p class="text-slate-700 text-sm mt-1">Pengeboran, Konstruksi, Survey & Analisis Geoteknik</p>
+                        </div>
+                        <div>
+                            <span class="text-xs font-semibold text-geoRed uppercase tracking-wider">Tanggung Jawab</span>
+                            <ul class="mt-2 space-y-1.5 text-sm text-slate-600 list-disc list-inside">
+                                <li>Perencanaan & pengawasan.</li>
+                                <li>Manajemen tim.</li>
+                                <li>Pengendalian biaya & kualitas.</li>
+                                <li>Komunikasi, koordinasi & pengambilan keputusan.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Winarti -->
+                <div class="bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden group hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-64 overflow-hidden relative bg-slate-100">
+                        <img src="https://ui-avatars.com/api/?name=Winarti&background=0B1120&color=fff&size=512" alt="Dr. Ir. Winarti" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-geoDark/80 to-transparent flex items-end p-6">
+                            <span class="bg-slate-600 text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wider">Penasihat Geofisika</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-geoDark mb-1">Dr. Ir. Winarti, S.T., M.T.</h3>
+                        <p class="text-sm text-slate-500 mb-4">Sejak 2025 &bull; Institut Teknologi Nasional Yogyakarta</p>
+                        <div class="mb-5">
+                            <span class="text-xs font-semibold text-geoBlue uppercase tracking-wider">Spesialisasi</span>
+                            <p class="text-slate-700 text-sm mt-1">Geofisika, Pengeboran, Geoteknik</p>
+                        </div>
+                        <div>
+                            <span class="text-xs font-semibold text-geoRed uppercase tracking-wider">Tanggung Jawab</span>
+                            <ul class="mt-2 space-y-1.5 text-sm text-slate-600 list-disc list-inside">
+                                <li>Mengarahkan survei geofisika dan pemodelan bawah permukaan.</li>
+                                <li>Mentoring analisis data seismik dan interpretasi hasil survei.</li>
+                                <li>Berkoordinasi dengan tim lintas fungsi untuk evaluasi eksplorasi.</li>
+                                <li>Mengawasi penerapan hasil studi pada kegiatan pengeboran.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Akhmad -->
+                <div class="bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden group hover:shadow-xl transition-shadow duration-300 lg:col-start-2" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-64 overflow-hidden relative bg-slate-100">
+                        <img src="https://ui-avatars.com/api/?name=Akhmad+Fajar&background=0B1120&color=fff&size=512" alt="Dr. Akhmad Fajar Prasetya" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-geoDark/80 to-transparent flex items-end p-6">
+                            <span class="bg-slate-600 text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wider">Penasihat SDM</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-geoDark mb-1 leading-tight">Dr. Akhmad Fajar P, S.Pd., M.Pd., CHt., CI.</h3>
+                        <p class="text-sm text-slate-500 mb-4">Sejak 2025</p>
+                        <div class="mb-5">
+                            <span class="text-xs font-semibold text-geoBlue uppercase tracking-wider">Spesialisasi</span>
+                            <p class="text-slate-700 text-sm mt-1">Filsafat Ilmu, Konseling Behavioristik, Konseling Komprehensif, Konseling Multicultural, Teknik Tes</p>
+                        </div>
+                        <div>
+                            <span class="text-xs font-semibold text-geoRed uppercase tracking-wider">Tanggung Jawab</span>
+                            <ul class="mt-2 space-y-1.5 text-sm text-slate-600 list-disc list-inside">
+                                <li>Mentoring strategi pengembangan kompetensi karyawan.</li>
+                                <li>Membimbing manajemen dalam perencanaan tenaga kerja.</li>
+                                <li>Mengawasi kebijakan kompensasi, benefit, dan penghargaan.</li>
+                                <li>Memastikan kebijakan SDM sesuai dengan peraturan.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Al Hussein -->
+                <div class="bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden group hover:shadow-xl transition-shadow duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-64 overflow-hidden relative bg-slate-100">
+                        <img src="https://ui-avatars.com/api/?name=Al+Hussein&background=0B1120&color=fff&size=512" alt="Al Hussein Flowers Rizqi" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-geoDark/80 to-transparent flex items-end p-6">
+                            <span class="bg-slate-600 text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wider">Penasihat GeoHidrologi</span>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-geoDark mb-1">Al Hussein Flowers R, S.T., M.Eng.</h3>
+                        <p class="text-sm text-slate-500 mb-4">Sejak 2025 &bull; Institut Teknologi Nasional Yogyakarta</p>
+                        <div class="mb-5">
+                            <span class="text-xs font-semibold text-geoBlue uppercase tracking-wider">Spesialisasi</span>
+                            <p class="text-slate-700 text-sm mt-1">Geologi</p>
+                        </div>
+                        <div>
+                            <span class="text-xs font-semibold text-geoRed uppercase tracking-wider">Tanggung Jawab</span>
+                            <ul class="mt-2 space-y-1.5 text-sm text-slate-600 list-disc list-inside">
+                                <li>Memberikan rekomendasi pengelolaan sumber daya air tanah.</li>
+                                <li>Mengevaluasi studi geohidrologi untuk lokasi sumur bor.</li>
+                                <li>Mengevaluasi analisis data hidrologi (kuantitas dan kualitas air).</li>
+                                <li>Mengawasi kepatuhan terhadap regulasi lingkungan hidrologi.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: FOOTER -->
+    <footer class="bg-geoDark pt-16 pb-8 relative overflow-hidden border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Column 1: Brand -->
+                <div class="lg:col-span-1">
+                    <span class="font-extrabold text-2xl tracking-tight mb-4 inline-block"><span
+                            class="text-geoBlue-light">GEO</span><span class="text-white">SANTARA INDO</span></span>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Pionir Infrastruktur Air Industri & Konsesi
+                        Berkelanjutan. Mengamankan pasokan air bisnis Anda dengan teknologi mutakhir.</p>
+                </div>
+
+                <!-- Column 2: Divisi -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Divisi & Layanan</h4>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Konsesi & Infrastruktur
+                                SPAM</a></li>
+                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Eksplorasi Sumber Daya
+                                Tanah</a></li>
+                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Geoteknik & Rekayasa
+                                Fondasi</a></li>
+                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Audit & Konsultasi
+                                Perizinan</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Perusahaan -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Perusahaan</h4>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="tentang-kami.html" class="hover:text-geoRed-light transition-colors">Tentang
+                                Kami</a></li>
+                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Portofolio Proyek</a></li>
+                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Berita & Artikel</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Kontak -->
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Hubungi Kami</h4>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li>Jl. Magelang No. 188, Yogyakarta, DIY 55242</li>
+                        <li>0811-3450-0100</li>
+                        <li>hallo@geosantara.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-sm">&copy; 2026 PT Geo Santara Indo. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky WhatsApp Button -->
+    <a href="https://wa.me/6281134500100" target="_blank"
+        class="fixed bottom-6 right-6 z-50 flex items-center gap-3 group">
+        <div
+            class="bg-white px-4 py-2 rounded-full shadow border border-slate-100 text-sm font-semibold text-slate-700 opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 transition-all duration-300 hidden md:block">
+            Konsultasi Gratis
+        </div>
+        <div
+            class="floating-wa w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-lg hover:bg-[#1ebd5b] transition-colors cursor-pointer border-2 border-white">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 3.825.001 6.938 3.113 6.939 6.938-.001 3.825-3.114 6.938-6.939 6.938z">
+                </path>
+            </svg>
+        </div>
+    </a>
+
+    <!-- UI Scripts -->
+    <script>
+        // Mobile Menu Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+    
+    <!-- External Assets Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

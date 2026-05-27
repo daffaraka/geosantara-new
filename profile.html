@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | PT Geo Santara Indo</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        geoBlue: {
+                            DEFAULT: '#1E3A8A',
+                            dark: '#172554',
+                            light: '#E2E8F0',
+                            accent: '#3B82F6'
+                        },
+                        geoRed: {
+                            DEFAULT: '#991B1B',
+                            dark: '#7F1D1D',
+                            light: '#F5E6E6',
+                            accent: '#EF4444'
+                        },
+                        geoDark: '#0B1120',
+                        geoGray: '#F8FAFC'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .group:hover .simple-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body class="font-sans text-slate-800 bg-geoGray antialiased selection:bg-geoRed selection:text-white overflow-x-hidden">
+
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b-4 border-geoBlue shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <div class="w-10 h-10 bg-geoBlue rounded-full flex items-center justify-center text-white font-bold text-xl">G</div>
+                    <span class="font-extrabold text-2xl tracking-tight"><span class="text-geoBlue">GEO</span><span class="text-geoDark">SANTARA INDO</span></span>
+                </a>
+
+                <nav class="hidden lg:flex space-x-8 items-center">
+                    <a href="index.html" class="text-slate-600 hover:text-geoRed font-medium transition-colors duration-300 py-2">Beranda</a>
+                    <div class="group relative py-2">
+                        <button class="text-geoRed font-semibold inline-flex items-center transition-colors duration-300 border-b-2 border-geoRed">
+                            Tentang Kami
+                            <svg class="ml-1 w-4 h-4 text-geoRed transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="simple-dropdown absolute left-0 mt-4 w-56 opacity-0 invisible translate-y-2 transition-all duration-300 ease-in-out bg-white rounded-lg shadow-xl border border-slate-100 overflow-hidden z-50">
+                            <div class="py-2">
+                                <a href="profile.html" class="block px-4 py-3 text-sm font-semibold text-geoBlue hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Profile</a>
+                                <a href="sejarah.html" class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Sejarah Perusahaan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group relative py-2">
+                        <button class="text-slate-600 hover:text-geoRed font-medium inline-flex items-center transition-colors duration-300">
+                            Divisi & Layanan
+                            <svg class="ml-1 w-4 h-4 text-slate-400 group-hover:text-geoRed transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="simple-dropdown absolute left-0 mt-4 w-64 opacity-0 invisible translate-y-2 transition-all duration-300 ease-in-out bg-white rounded-lg shadow-xl border border-slate-100 overflow-hidden z-50">
+                            <div class="py-2">
+                                <a href="#" class="block px-4 py-3 text-sm font-semibold text-geoBlue hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Konsesi SPAM B2B</a>
+                                <a href="#" class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Eksplorasi Sumber Daya</a>
+                                <a href="#" class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Geoteknik & Fondasi</a>
+                                <a href="#" class="block px-4 py-3 text-sm font-medium text-slate-600 hover:bg-geoBlue/5 hover:text-geoRed transition-colors">Audit & Perizinan</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="text-slate-600 hover:text-geoRed font-medium transition-colors duration-300 py-2">Portofolio</a>
+                    <a href="kontak.html" class="text-slate-600 hover:text-geoRed font-medium transition-colors duration-300 py-2">Kontak Kami</a>
+                </nav>
+
+                <div class="hidden lg:flex">
+                    <a href="#" class="bg-geoRed hover:bg-geoRed-dark text-white px-6 py-2.5 rounded font-semibold shadow-md shadow-geoRed/20 transition-all duration-300 hover:-translate-y-0.5">Konsultasi SPAM</a>
+                </div>
+
+                <div class="flex lg:hidden items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-geoRed focus:outline-none p-2">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full left-0">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-geoRed hover:bg-slate-50 border-b border-slate-50">Beranda</a>
+                <div class="px-3 py-3 border-b border-slate-50">
+                    <span class="block text-base font-medium text-slate-700">Tentang Kami</span>
+                    <div class="pl-4 mt-2 space-y-1">
+                        <a href="profile.html" class="block px-3 py-2 rounded-md text-sm font-bold text-geoRed bg-slate-50">Profile</a>
+                        <a href="sejarah.html" class="block px-3 py-2 rounded-md text-sm font-medium text-slate-600 hover:text-geoRed hover:bg-slate-50">Sejarah Perusahaan</a>
+                    </div>
+                </div>
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-geoRed hover:bg-slate-50 border-b border-slate-50">Divisi & Layanan</a>
+                <a href="#" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-geoRed hover:bg-slate-50 border-b border-slate-50">Portofolio</a>
+                <a href="kontak.html" class="block px-3 py-3 rounded-md text-base font-medium text-slate-700 hover:text-geoRed hover:bg-slate-50 border-b border-slate-50">Kontak Kami</a>
+                <a href="#" class="block mt-4 text-center bg-geoRed hover:bg-geoRed-dark text-white px-6 py-3 rounded-md font-semibold transition-colors">Konsultasi SPAM</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative bg-geoDark overflow-hidden py-24 lg:py-36 border-b-8 border-geoRed">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-geoBlue-accent via-geoDark to-geoDark"></div>
+        <div class="absolute right-0 top-0 w-1/2 h-full opacity-10 bg-[url('https://images.unsplash.com/photo-1541888086425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-left [mask-image:linear-gradient(to_left,white,transparent)]"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-geoRed/20 text-geoRed-light text-sm font-bold uppercase tracking-widest mb-6 border border-geoRed/30" data-aos="fade-up">Company Profile</span>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white mb-6 leading-tight" data-aos="fade-up" data-aos-delay="100">
+                    Fondasi <span class="text-geoBlue-accent">Kuat</span>,<br> Masa Depan <span class="text-geoRed-accent">Terukur</span>
+                </h1>
+                <p class="text-xl text-slate-300 leading-relaxed mb-10 border-l-4 border-geoRed pl-6" data-aos="fade-up" data-aos-delay="200">
+                    Badan Usaha yang bergerak di bidang pengeboran, survey geologi, pertambangan serta analisis atas dan bawah permukaan.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRO SECTION -->
+    <section class="py-20 lg:py-28 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl font-bold text-geoDark mb-6">Berkembang Bersama Pembangunan Indonesia</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed mb-6">
+                        <strong class="text-geoBlue">PT. Geo Santara didirikan pada tahun 2018</strong> dan telah melakukan berbagai proyek di beberapa wilayah di Indonesia seperti: Yogyakarta, Semarang, Sumatera Utara, Sumatera Selatan, Bandung, Banten, Bogor, Tangerang, Bekasi, Sukabumi, Purwakarta, Cirebon, Surabaya, Malang, Gresik, Madura, Kalimantan Barat, Kalimantan Tengah, Kalimantan Timur, Kalimantan Selatan, Bali, Kupang dan wilayah lain di seluruh Indonesia.
+                    </p>
+                    <p class="text-lg text-slate-600 leading-relaxed">
+                        Setelah melakukan riset mengenai perkembangan pembangunan yang semakin meningkat di beberapa sektor, seperti industri manufaktur, sektor energi, dan konstruksi di wilayah Indonesia. Diketahui bahwa memiliki daya saing yang kompleks dari segi pelayanan jasa. 
+                    </p>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <div class="glass-card p-8 rounded-2xl shadow-xl bg-geoGray border-t-4 border-geoRed relative">
+                        <svg class="absolute top-6 right-6 w-12 h-12 text-geoBlue opacity-10" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+                        <h3 class="text-xl font-bold text-geoDark mb-4 relative z-10">Kesiapan & Kematangan Kuat</h3>
+                        <p class="text-slate-600 leading-relaxed relative z-10 mb-4">
+                            Untuk mengantisipasinya, kami sudah memiliki bekal kematangan kuat untuk ikut berpartisipasi di masing-masing bidang. Juga dari segi kedisiplinan dan profesional kerja pun kami jaga dengan baik.
+                        </p>
+                        <p class="text-geoBlue font-semibold relative z-10">
+                            Sehingga klien yang melakukan kerja sama dengan kami akan merasa nyaman dan bisa bekerja sama jangka panjang.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BENTENG EKONOMI & KLIEN SECTION -->
+    <section class="py-20 bg-geoDark text-white border-y border-slate-800 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-5xl opacity-5 bg-[radial-gradient(circle,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-6">Benteng Ekonomi PT Geo Santara Indo</h2>
+                <p class="text-xl text-slate-400">Menganalisis Keunggulan Kompetitif Berkelanjutan di Industri Pengeboran & Survei Geologi Indonesia.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-12 items-center mb-20">
+                <div class="lg:col-span-5 text-center lg:text-left" data-aos="fade-right">
+                    <div class="inline-flex items-center justify-center w-40 h-40 rounded-full bg-geoRed/10 border-4 border-geoRed text-geoRed-accent font-black text-6xl shadow-[0_0_50px_rgba(239,68,68,0.2)] mb-6">
+                        97%
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Tingkat Rekomendasi Pelanggan</h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        <strong class="text-white">Fondasi Kepercayaan yang Tak Tertandingi.</strong> Tingkat rekomendasi pelanggan yang luar biasa sebesar 97% bukan sekadar angka, melainkan bukti nyata dari kepuasan klien yang mendalam. Ini adalah pilar utama dari reputasi merek GSI, yang dibangun di atas keandalan, keahlian, dan hasil yang konsisten.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-7 bg-slate-900 rounded-3xl p-8 lg:p-12 border border-slate-800" data-aos="fade-left">
+                    <h3 class="text-xl font-semibold mb-8 text-center text-slate-300 uppercase tracking-widest">Dipercaya oleh Pemimpin Industri</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-8 items-center justify-items-center opacity-70">
+                        <!-- Placeholder Client Logos using text for now, could be replaced with actual SVG logos -->
+                        <div class="font-black text-2xl tracking-tighter hover:text-white transition-colors duration-300">ANTAM</div>
+                        <div class="font-black text-2xl tracking-tighter hover:text-white transition-colors duration-300">WIKA</div>
+                        <div class="font-black text-2xl tracking-tighter hover:text-white transition-colors duration-300 text-center">BERAU COAL</div>
+                        <div class="font-black text-2xl tracking-tighter hover:text-white transition-colors duration-300 text-center">SUCOFINDO</div>
+                        <div class="font-black text-2xl tracking-tighter hover:text-white transition-colors duration-300">HOKBEN</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISI MISI SECTION -->
+    <section class="py-24 bg-geoGray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                
+                <!-- Visi -->
+                <div class="bg-white rounded-3xl p-10 shadow-xl border-t-8 border-geoBlue relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute -right-6 -top-6 w-32 h-32 bg-geoBlue/5 rounded-full"></div>
+                    <div class="flex items-center gap-4 mb-6 relative z-10">
+                        <div class="p-3 bg-geoBlue/10 rounded-lg text-geoBlue">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                        </div>
+                        <h2 class="text-3xl font-extrabold text-geoDark">Visi 2025</h2>
+                    </div>
+                    <p class="text-xl text-slate-700 leading-relaxed font-medium italic relative z-10">
+                        "Menjadi perusahaan pengeboran No. 1 di Indonesia yang unggul, terpercaya, inovatif, produktif, dan selalu mengedepankan profesionalisme serta pelayanan terbaik."
+                    </p>
+                </div>
+
+                <!-- Misi -->
+                <div class="bg-white rounded-3xl p-10 shadow-xl border-t-8 border-geoRed relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -right-6 -bottom-6 w-32 h-32 bg-geoRed/5 rounded-full"></div>
+                    <div class="flex items-center gap-4 mb-8 relative z-10">
+                        <div class="p-3 bg-geoRed/10 rounded-lg text-geoRed">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        </div>
+                        <h2 class="text-3xl font-extrabold text-geoDark">Misi 2025</h2>
+                    </div>
+                    <ul class="space-y-4 text-slate-600 relative z-10">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-geoRed shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Mengadopsi teknologi pengeboran terbaru untuk meningkatkan kualitas layanan 20% dalam 2 tahun.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-geoRed shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Meningkatkan kepuasan klien hingga retensi 90% melalui penyelesaian proyek tepat waktu.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-geoRed shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Melatih dan mengembangkan minimal 50 karyawan bersertifikasi profesional setiap tahun.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-geoRed shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Menerapkan sistem manajemen mutu ISO 9001 dalam 18 bulan.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-geoRed shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Menjalin minimal 5 kemitraan strategis baru setiap tahun.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMPAT PILAR SECTION -->
+    <section class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="inline-block text-geoRed text-sm font-bold uppercase tracking-widest mb-2">Pilar Kekuatan</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-geoDark mb-4">Empat Pilar Benteng Ekonomi GSI</h2>
+                <p class="text-slate-600 text-lg">Keunggulan kompetitif GSI dilindungi oleh empat benteng utama yang sulit ditiru oleh pesaing.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Pilar 1 -->
+                <div class="p-8 rounded-2xl bg-geoGray border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-geoBlue/10 rounded-xl flex items-center justify-center text-geoBlue mb-6 group-hover:bg-geoBlue group-hover:text-white transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-geoDark mb-3">Aset Tak Berwujud</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Reputasi merek yang solid, kepercayaan klien, dan pengetahuan kepakaran dari tim bersertifikat.</p>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="p-8 rounded-2xl bg-geoGray border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-geoRed/10 rounded-xl flex items-center justify-center text-geoRed mb-6 group-hover:bg-geoRed group-hover:text-white transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-geoDark mb-3">Biaya Peralihan</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Layanan terintegrasi "satu atap" dari survei hingga perizinan, mengikat klien dalam ekosistem GSI.</p>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="p-8 rounded-2xl bg-geoGray border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-geoBlue/10 rounded-xl flex items-center justify-center text-geoBlue mb-6 group-hover:bg-geoBlue group-hover:text-white transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-geoDark mb-3">Skala Efisien</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Spesialisasi di pasar bernilai tinggi (mis. Geotermal) dan penguasaan regulasi yang kompleks.</p>
+                </div>
+
+                <!-- Pilar 4 -->
+                <div class="p-8 rounded-2xl bg-geoGray border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-geoRed/10 rounded-xl flex items-center justify-center text-geoRed mb-6 group-hover:bg-geoRed group-hover:text-white transition-colors">
+                        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-geoDark mb-3">Keunggulan Biaya</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Efisiensi operasional dan akses ke peralatan canggih yang mahal bagi pesaing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NILAI INTI & KPI -->
+    <section class="py-24 bg-geoDark text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-3xl md:text-4xl font-extrabold mb-6">Nilai Inti Kami:<br><span class="text-geoBlue-accent">Fondasi Benteng Ekonomi</span></h2>
+                    <p class="text-slate-400 mb-10 text-lg">Menerapkan standar tertinggi dalam operasional harian kami untuk mencapai target dan mempertahankan posisi kepemimpinan.</p>
+                    
+                    <div class="space-y-6">
+                        <!-- KPI 1 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-white">Profesionalisme Terukur</span>
+                                <span class="text-geoRed-accent font-bold">Target: 95%</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="bg-geoRed-accent h-2.5 rounded-full" style="width: 95%"></div>
+                            </div>
+                            <p class="text-xs text-slate-500 mt-1">Kepatuhan SOP</p>
+                        </div>
+                        
+                        <!-- KPI 2 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-white">Kepercayaan & Transparansi</span>
+                                <span class="text-geoBlue-accent font-bold">Target: 90%</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="bg-geoBlue-accent h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                            <p class="text-xs text-slate-500 mt-1">Kepuasan Pelanggan</p>
+                        </div>
+
+                        <!-- KPI 3 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-white">Produktivitas & Efisiensi</span>
+                                <span class="text-geoRed-accent font-bold">Target: 95%</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="bg-geoRed-accent h-2.5 rounded-full" style="width: 95%"></div>
+                            </div>
+                            <p class="text-xs text-slate-500 mt-1">Proyek Tepat Waktu</p>
+                        </div>
+
+                        <!-- KPI 4 -->
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-white">Retensi Klien Unggul</span>
+                                <span class="text-geoBlue-accent font-bold">Target: 90%</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="bg-geoBlue-accent h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-6" data-aos="fade-left">
+                    <div class="bg-slate-900 border border-slate-700 p-8 rounded-2xl flex flex-col items-center justify-center text-center">
+                        <div class="text-4xl font-black text-geoBlue-accent mb-2">50+</div>
+                        <h4 class="font-bold text-white mb-2">Pengembangan SDM</h4>
+                        <p class="text-sm text-slate-400">Karyawan Bersertifikasi/Tahun</p>
+                    </div>
+                    
+                    <div class="bg-slate-900 border border-slate-700 p-8 rounded-2xl flex flex-col items-center justify-center text-center">
+                        <div class="text-4xl font-black text-geoRed-accent mb-2">+15%</div>
+                        <h4 class="font-bold text-white mb-2">Inovasi Teknologi</h4>
+                        <p class="text-sm text-slate-400">Target Peningkatan Efisiensi</p>
+                    </div>
+
+                    <div class="bg-slate-900 border border-slate-700 p-8 rounded-2xl flex flex-col items-center justify-center text-center">
+                        <div class="text-4xl font-black text-white mb-2">66%</div>
+                        <h4 class="font-bold text-white mb-2">Implementasi Mutu</h4>
+                        <p class="text-sm text-slate-400">Progres ISO 9001 (18 Bulan)</p>
+                    </div>
+                    
+                    <div class="bg-slate-900 border border-slate-700 p-8 rounded-2xl flex flex-col items-center justify-center text-center">
+                        <div class="text-4xl font-black text-white mb-2">5+</div>
+                        <h4 class="font-bold text-white mb-2">Target Kemitraan</h4>
+                        <p class="text-sm text-slate-400">Strategis Baru per Tahun</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUSI TERINTEGRASI -->
+    <section class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <span class="inline-block text-geoBlue text-sm font-bold uppercase tracking-widest mb-2">Lanskap Kompetitif</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-geoDark mb-6">Solusi Terintegrasi:<br>Kekuatan Biaya Peralihan</h2>
+                <p class="text-slate-600 text-lg">GSI menyederhanakan proyek kompleks dengan mengelola setiap tahap, menciptakan biaya peralihan yang tinggi bagi klien. Sementara pesaing fokus pada layanan dasar, GSI menawarkan solusi menyeluruh yang tidak dapat ditandingi.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6 relative">
+                <!-- Connector Line -->
+                <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-slate-100 -translate-y-1/2 z-0"></div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 bg-white p-6 rounded-2xl border-2 border-slate-100 shadow-sm text-center hover:border-geoRed transition-colors duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 mx-auto bg-geoDark text-white rounded-full flex items-center justify-center font-bold text-2xl mb-4 border-4 border-white shadow-lg">1</div>
+                    <h3 class="font-bold text-geoDark mb-2">Survei & Analisis</h3>
+                    <p class="text-sm text-slate-500">Geolistrik, Topografi, LiDAR</p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="relative z-10 bg-white p-6 rounded-2xl border-2 border-slate-100 shadow-sm text-center hover:border-geoRed transition-colors duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 mx-auto bg-geoRed text-white rounded-full flex items-center justify-center font-bold text-2xl mb-4 border-4 border-white shadow-lg">2</div>
+                    <h3 class="font-bold text-geoDark mb-2">Pengeboran</h3>
+                    <p class="text-sm text-slate-500">Sumur Bor, Geotermal</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 bg-white p-6 rounded-2xl border-2 border-slate-100 shadow-sm text-center hover:border-geoRed transition-colors duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 mx-auto bg-geoBlue text-white rounded-full flex items-center justify-center font-bold text-2xl mb-4 border-4 border-white shadow-lg">3</div>
+                    <h3 class="font-bold text-geoDark mb-2">Pengujian & Inspeksi</h3>
+                    <p class="text-sm text-slate-500">Pumping Test, Logging</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="relative z-10 bg-white p-6 rounded-2xl border-2 border-slate-100 shadow-sm text-center hover:border-geoRed transition-colors duration-300" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 mx-auto bg-geoDark text-white rounded-full flex items-center justify-center font-bold text-2xl mb-4 border-4 border-white shadow-lg">4</div>
+                    <h3 class="font-bold text-geoDark mb-2">Perizinan & Kepatuhan</h3>
+                    <p class="text-sm text-slate-500">SIPA, AMDAL</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGULASI -->
+    <section class="py-24 bg-geoGray border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col lg:flex-row">
+                <div class="lg:w-2/5 bg-geoRed p-10 lg:p-14 text-white flex flex-col justify-center">
+                    <h2 class="text-3xl font-extrabold mb-4">Mengubah Regulasi Menjadi Keunggulan</h2>
+                    <p class="text-red-100 leading-relaxed text-lg">Peraturan ketat seperti Permen ESDM No. 14 Tahun 2024 menjadi penghalang bagi pesaing, namun menjadi peluang emas bagi PT Geo Santara Indo.</p>
+                </div>
+                <div class="lg:w-3/5 p-10 lg:p-14 bg-white relative">
+                    <svg class="absolute top-0 right-0 w-32 h-32 text-slate-50 -mt-10 -mr-10 rotate-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"></path></svg>
+                    
+                    <ul class="space-y-4 relative z-10">
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-geoBlue/10 flex items-center justify-center text-geoBlue shrink-0 mt-0.5 font-bold">1</div>
+                            <span class="text-slate-700 font-medium text-lg">Kewajiban data teknis terperinci.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-geoBlue/10 flex items-center justify-center text-geoBlue shrink-0 mt-0.5 font-bold">2</div>
+                            <span class="text-slate-700 font-medium text-lg">Pembangunan sumur pantau wajib (AWLR).</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-geoBlue/10 flex items-center justify-center text-geoBlue shrink-0 mt-0.5 font-bold">3</div>
+                            <span class="text-slate-700 font-medium text-lg">Pemasangan meter air untuk pemantauan.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-geoBlue/10 flex items-center justify-center text-geoBlue shrink-0 mt-0.5 font-bold">4</div>
+                            <span class="text-slate-700 font-medium text-lg">Pelaporan teknis berkala secara online.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 rounded-full bg-geoBlue/10 flex items-center justify-center text-geoBlue shrink-0 mt-0.5 font-bold">5</div>
+                            <span class="text-slate-700 font-medium text-lg">Komitmen konservasi air tanah.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-geoDark pt-16 pb-8 relative overflow-hidden border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="mb-12 p-6 bg-slate-900 rounded-xl border border-slate-800 text-center">
+                <p class="text-slate-400 italic text-sm">Catatan: Infografis ini merangkum analisis komprehensif PT Geo Santara Indo.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="lg:col-span-1">
+                    <span class="font-extrabold text-2xl tracking-tight mb-4 inline-block"><span
+                            class="text-geoBlue-light">GEO</span><span class="text-white">SANTARA INDO</span></span>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-6">Pionir Infrastruktur Air Industri & Konsesi
+                        Berkelanjutan. Mengamankan pasokan air bisnis Anda dengan teknologi mutakhir.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Divisi & Layanan</h4>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Konsesi & Infrastruktur SPAM</a></li>
+                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Eksplorasi Sumber Daya Tanah</a></li>
+                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Geoteknik & Rekayasa Fondasi</a></li>
+                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Audit & Konsultasi Perizinan</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Perusahaan</h4>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="profile.html" class="hover:text-geoRed-light transition-colors">Profile</a></li>
+                        <li><a href="sejarah.html" class="hover:text-geoRed-light transition-colors">Sejarah Perusahaan</a></li>
+                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Portofolio Proyek</a></li>
+                        <li><a href="#" class="hover:text-geoRed-light transition-colors">Berita & Artikel</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4 text-sm">Hubungi Kami</h4>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li>santarageo@gmail.com</li>
+                        <li>WA: 081134500100</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-sm">&copy; 2026 PT. GEO SANTARA INDO</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky WhatsApp Button -->
+    <a href="https://wa.me/6281134500100" target="_blank"
+        class="fixed bottom-6 right-6 z-50 flex items-center gap-3 group">
+        <div
+            class="bg-white px-4 py-2 rounded-full shadow border border-slate-100 text-sm font-semibold text-slate-700 opacity-0 group-hover:opacity-100 translate-x-4 group-hover:translate-x-0 transition-all duration-300 hidden md:block">
+            Konsultasi Gratis
+        </div>
+        <div
+            class="floating-wa w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-lg hover:bg-[#1ebd5b] transition-colors cursor-pointer border-2 border-white">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                    d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964.984-3.595c-.607-1.052-.927-2.246-.926-3.468.001-3.825 3.113-6.937 6.937-6.937 3.825.001 6.938 3.113 6.939 6.938-.001 3.825-3.114 6.938-6.939 6.938z">
+                </path>
+            </svg>
+        </div>
+    </a>
+
+    <!-- UI Scripts -->
+    <script>
+        // Mobile Menu Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+    
+    <!-- External Assets Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
