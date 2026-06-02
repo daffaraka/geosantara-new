@@ -1,0 +1,92 @@
+[
+  {
+    "category_id": 1,
+    "category_parent": 0,
+    "category_title": "Jasa Pembuatan Sumur Bor Dalam",
+    "category_ordering": 2,
+    "category_content": "",
+    "category_status": "Y",
+    "category_color": "#dc2900"
+  },
+  {
+    "category_id": 2,
+    "category_parent": 0,
+    "category_title": "Jasa Topografi Profesional",
+    "category_ordering": 3,
+    "category_content": "",
+    "category_status": "Y",
+    "category_color": "#4fbe72"
+  },
+  {
+    "category_id": 3,
+    "category_parent": 0,
+    "category_title": "Borehole Camera",
+    "category_ordering": 4,
+    "category_content": "",
+    "category_status": "Y",
+    "category_color": "#280ade"
+  },
+  {
+    "category_id": 4,
+    "category_parent": 0,
+    "category_title": "Sondir Boring Test",
+    "category_ordering": 5,
+    "category_content": "",
+    "category_status": "Y",
+    "category_color": "#000000"
+  },
+  {
+    "category_id": 5,
+    "category_parent": 0,
+    "category_title": "Electrical Logging Test",
+    "category_ordering": 6,
+    "category_content": "",
+    "category_status": "Y",
+    "category_color": "#b013de"
+  },
+  {
+    "category_id": 6,
+    "category_parent": 0,
+    "category_title": "Jasa Geolistrik",
+    "category_ordering": 7,
+    "category_content": "",
+    "category_status": "Y",
+    "category_color": "#4dafe0"
+  },
+  {
+    "category_id": 7,
+    "category_parent": 0,
+    "category_title": "Jasa Geoteknik",
+    "category_ordering": 8,
+    "category_content": "",
+    "category_status": "Y",
+    "category_color": "#e7d505"
+  },
+  {
+    "category_id": 8,
+    "category_parent": 0,
+    "category_title": "Borepile & Konstruksi",
+    "category_ordering": 9,
+    "category_content": "",
+    "category_status": "Y",
+    "category_color": "#e08709"
+  },
+  {
+    "category_id": 9,
+    "category_parent": 0,
+    "category_title": "Perizinan SIP & SIPA",
+    "category_ordering": 10,
+    "category_content": "",
+    "category_status": "Y",
+    "category_color": "#66df08"
+  },
+  {
+    "category_id": 10,
+    "category_parent": 0,
+    "category_title": "Proyek 2025",
+    "category_ordering": 1,
+    "category_content": "",
+    "category_status": "Y",
+    "category_color": "#8c00ff"
+  }
+]
